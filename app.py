@@ -9,16 +9,14 @@ app = Flask(__name__)
 
 # url = 'https://hooks.zapier.com/hooks/catch/xxxxx/yyyyy/'
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def home():
     return '''<h1>Test API for Dynamic Vocher</h1>
 <p>A smaple api application which gets response and gives back voucher details.</p>'''
 
 
-@app.route('/create', methods=['GET','POST'])
+@app.route('/create', methods=['POST'])
 def create_row_in_gs():
-    if request.method == 'GET':
-        return make_response('failure')
     if request.method == 'POST':
         TransId = request.json["TransId"]
         AmountUsed = request.json["AmountUsed"]
