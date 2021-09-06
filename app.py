@@ -1,8 +1,8 @@
 
 from flask import Flask,jsonify,request,make_response,url_for,redirect
 #import requests, json
-import pandas as pd
-import os
+#import pandas as pd
+#import os
 # from google.cloud import bigquery
 
 app = Flask(__name__)
