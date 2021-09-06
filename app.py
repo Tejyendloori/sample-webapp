@@ -1,6 +1,9 @@
 
 from flask import Flask,jsonify,request,make_response,url_for,redirect
 import requests, json
+import pandas as pd
+import os
+# from google.cloud import bigquery
 
 app = Flask(__name__)
 
@@ -43,11 +46,9 @@ def create_row_in_gs():
                            'MemberType':str(MemberType),'TransactionDate':str(TransactionDate),
                            'TransAmount':TransAmount,'ComplexName':ComplexName}
 
-        import pandas as pd
-        import os
-        from google.cloud import bigquery
-        df = pd.DataFrame([create_row_data], columns=create_row_data.keys())
-        df['Voucher'] = str('VCO'+str(MemberPhone))
+
+        # df = pd.DataFrame([create_row_data], columns=create_row_data.keys())
+        # df['Voucher'] = str('VCO'+str(MemberPhone))
         # os.environ['GOOGLE_APPLICATION_CREDENTIALS'] =  r'C:\Users\I2103\Desktop\venv\first-energy-305211-b9163fe4fff3.json'
         # bigqueryClient = bigquery.Client()
         # job_config = bigquery.LoadJobConfig( 
