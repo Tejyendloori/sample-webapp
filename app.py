@@ -18,31 +18,31 @@ def home():
 @app.route('/create', methods=['POST'])
 def create_row_in_gs():
     if request.method == 'POST':
-        TransId = request.json["TransId"]
-        AmountUsed = request.json["AmountUsed"]
-        MembershipId = request.json["MembershipId"]
+        #TransId = request.json["TransId"]
+        #AmountUsed = request.json["AmountUsed"]
+        #MembershipId = request.json["MembershipId"]
         MemberPhone = request.json["MemberPhone"]
-        Sequence = request.json["Sequence"] 
-        BalanceType = request.json["BalanceType"] 
-        RecognitionId = request.json["RecognitionId"]
-        MemberEmail = request.json["MemberEmail"]
-        SchemeId = request.json["SchemeId"]
-        VoucherExpiry = request.json["VoucherExpiry"]
-        BalancePoints = request.json["BalancePoints"]
-        IsEnrollment = request.json["IsEnrollment"]
-        MemberType = request.json["MemberType"]
-        TransactionDate = request.json["TransactionDate"]
-        TransAmount = request.json["TransAmount"]  
-        ComplexName = request.json["ComplexName"]
+        #Sequence = request.json["Sequence"] 
+        #BalanceType = request.json["BalanceType"] 
+        #RecognitionId = request.json["RecognitionId"]
+        #MemberEmail = request.json["MemberEmail"]
+        #SchemeId = request.json["SchemeId"]
+        #VoucherExpiry = request.json["VoucherExpiry"]
+        #BalancePoints = request.json["BalancePoints"]
+        #IsEnrollment = request.json["IsEnrollment"]
+        #MemberType = request.json["MemberType"]
+        #TransactionDate = request.json["TransactionDate"]
+        #TransAmount = request.json["TransAmount"]  
+        #ComplexName = request.json["ComplexName"]
 
-        create_row_data = {'TransId': TransId,'AmountUsed':AmountUsed,
-                           'MembershipId':str(MembershipId),'MemberPhone':str(MemberPhone),
-                           'Sequence':(Sequence), 'BalanceType' : (BalanceType),
-                           'RecognitionId':(RecognitionId), 'MemberEmail':str(MemberEmail),
-                           'SchemeId':(SchemeId),'VoucherExpiry':str(VoucherExpiry),
-                           'BalancePoints':(BalancePoints),'IsEnrollment':str(IsEnrollment),
-                           'MemberType':str(MemberType),'TransactionDate':str(TransactionDate),
-                           'TransAmount':TransAmount,'ComplexName':ComplexName}
+#         create_row_data = {'TransId': TransId,'AmountUsed':AmountUsed,
+#                            'MembershipId':str(MembershipId),'MemberPhone':str(MemberPhone),
+#                            'Sequence':(Sequence), 'BalanceType' : (BalanceType),
+#                            'RecognitionId':(RecognitionId), 'MemberEmail':str(MemberEmail),
+#                            'SchemeId':(SchemeId),'VoucherExpiry':str(VoucherExpiry),
+#                            'BalancePoints':(BalancePoints),'IsEnrollment':str(IsEnrollment),
+#                            'MemberType':str(MemberType),'TransactionDate':str(TransactionDate),
+#                            'TransAmount':TransAmount,'ComplexName':ComplexName}
 
 
         # df = pd.DataFrame([create_row_data], columns=create_row_data.keys())
