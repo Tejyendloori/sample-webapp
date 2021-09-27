@@ -22,6 +22,7 @@ def create_row_in_gs():
         #AmountUsed = request.json["AmountUsed"]
         #MembershipId = request.json["MembershipId"]
         MemberPhone = request.json["MemberPhone"]
+        print('Received_Input')
         #Sequence = request.json["Sequence"] 
         #BalanceType = request.json["BalanceType"] 
         #RecognitionId = request.json["RecognitionId"]
@@ -61,6 +62,7 @@ def create_row_in_gs():
         #     headers={'Content-Type': 'application/json'}
         # )
         # return response.content
+        print(str('VCO'+str(MemberPhone)))
         return str('VCO'+str(MemberPhone))
         
         
